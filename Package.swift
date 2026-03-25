@@ -22,6 +22,10 @@ let package = Package(
             name: "EasyAPI",
             resources: [
                 .process("Resources")
+            ],
+            swiftSettings: [
+                // Enable library evolution for binary compatibility
+                .unsafeFlags(["-enable-library-evolution"])
             ]
         ),
         .testTarget(
